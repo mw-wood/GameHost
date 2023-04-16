@@ -1,0 +1,116 @@
+:root {
+    --color-light: #80848e;
+    --color-medium: #2b2d31;
+    --color-dark: #1e1f22;
+    --blue-gradient: linear-gradient(90deg, rgba(129,248,255,1) 0%, rgba(129,248,255,1) 0%, rgba(78,78,236,1) 100%);
+
+    --button-height: 64px;
+}
+
+::placeholder {
+    color: var(--color-light);
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: var(--color-light);
+  }
+  
+  ::-ms-input-placeholder {
+    color: var(--color-light);
+  }
+
+.center {
+    margin: auto;
+}
+
+.auth-container {
+    width: 400px;
+    max-width: 90%;
+    height: 600px;
+    border-radius: 16px;
+    color: white;
+    background-color: var(--color-dark);
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    position: relative;
+    padding: 5px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.auth-container input:not([type="submit"]) {
+    width: 300px;
+    height: 48px;
+    padding-left: 15px;
+    border-radius: 32px;
+    background-color: var(--color-medium);
+    color: white;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+
+.auth-container input:not([type="submit"]):focus {
+    border: 2px solid #6394f4;
+}
+
+.auth-container input[type="submit"] {
+    width: 200px;
+    height: 48px;
+    border: none;
+    border-radius: 48px;
+    color: white;
+    background: var(--blue-gradient);
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.login-form {
+    position: absolute;
+    transition: 0.5s;
+    left: 55px;
+    top: 300px;
+}
+
+.register-form {
+    position: absolute;
+    left: 450px;
+    transition: 0.5s;
+    top: 200px;
+}
+
+.button-container {
+    width: 300px;
+    height: var(--button-height);
+    background-color: var(--color-medium);
+    border-radius: 64px;
+    margin: auto;
+    margin-top: 50px;
+    z-index: 4;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+
+.button {
+    width: 150px;
+    height: var(--button-height);
+    background: var(--blue-gradient);
+    border-radius: 64px;
+    z-index: 5;
+    position: absolute;
+    transition: 0.5s;
+    left: 55px;
+}
+
+.switch {
+    width: 145px;
+    height: var(--button-height);
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 6;
+    position: relative;
+    color: white;
+    font-weight: bold;
+}

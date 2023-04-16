@@ -1,41 +1,28 @@
 <?php
     require "functions.php";
-    if(isset($_POST["submit"])) $response = registerUser($_POST["username"], $_POST["email"], $_POST["password"], $_POST["confirm"]);
+    if(isset($_GET["logout"])) {
+        logout();
+    }
 ?>
+
+<!-- Home Screen -->
 
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Signup Form</title>
-</head>
-<body>
-    <h1>Signup Form</h1>
-    <form method="POST" action="">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" value="<?php echo@$_POST["username"] ?>" required><br><br>
+  <head>
+    <title>Automatic Games (UK)</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/default.css">
+    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/favicon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <meta name="author" content="Matthew Wood" />
 
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" value="<?php echo@$_POST["email"] ?>"  required><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" value="<?php echo@$_POST["password"] ?>"  required><br><br>
-
-    <label for="confirm">Confirm Password:</label>
-    <input type="password" name="confirm" id="confirm" value="<?php echo@$_POST["confirm"] ?>"  required><br><br>
-
-    <input type="submit" id="submit" name="submit" value="Submit">
-    </form>
-
-    <?php
-        if(@$response == "Success"){ ?>
-        <p> Your registration was successful. </p>
-    <?php
-        }
-        else { ?>
-        <p> <?php echo @$response; ?> </p>
-    <?php 
-        }
-    ?>
-
-</body>
+    <meta http-equiv="Pragma" content="no-cache" />
+  </head>
+  <body>
+    <?php include "nav.php" ?>
+    <a href ="?logout"> Logout </a>
+  </body>
 </html>

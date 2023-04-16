@@ -89,14 +89,14 @@
         if(hash("sha256", $password) != $data["password"]) return "Username or password is incorrect.";
         else {
             $_SESSION["user"] = $username;
-            header("location: home.php");
+            header("location: index.php");
             exit();
         }
     }
 
     function logout() {
         session_destroy();
-        header("location: login.php");
+        header("location: index.php");
         exit();
     }
 ?>
