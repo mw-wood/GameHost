@@ -62,7 +62,7 @@
         $prepared_statement -> execute();
 
         if($prepared_statement->affected_rows != 1) return "An error occured. Please try again.";
-        else return "Success";
+        else login($username, $password);
     }
 
     function login($username, $password) {
